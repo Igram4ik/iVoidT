@@ -1,6 +1,6 @@
 name: iVoidT
 version: '${project.version}'
-main: dev.igram4ik.ivoidt.ivoidt.IVoidT
-api-version: '1.19'
+main: dev.igram4ik.ivoidt.iVoidT
+api-version: '1.15'
 prefix: iVT
 authors: [Igram4ik]

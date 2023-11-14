@@ -1,6 +1,8 @@
 package dev.igram4ik.ivoidt;
 
+import dev.igram4ik.ivoidt.events.PlayerFallEvent;
 import org.apache.commons.lang3.time.StopWatch;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import static dev.igram4ik.ivoidt.Logger.Logger;
@@ -24,7 +26,7 @@ public final class iVoidT extends JavaPlugin {
         var fileConfig = getDataFolder().toPath().resolve("config.yml").toFile();
         Settings.IMP.reload(fileConfig);
 
-
+        Bukkit.getPluginManager().registerEvents(new PlayerFallEvent(), this);
 
         if (stopWatch.isStarted())
             stopWatch.stop();
